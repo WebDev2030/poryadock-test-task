@@ -1,0 +1,19 @@
+{
+  "name": "sva/poryadok",
+  "type": "project",
+  "authors": [
+    {
+      "name": "Vyacheslav Shevchenko"
+    }
+  ],
+  "require": {
+    "pecee/simple-router": "4.3.7.2",
+    "ext-mbstring": "*",
+    "ext-json": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "App\\": "app/"
+    }
+  }
+}
