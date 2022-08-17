@@ -2,6 +2,8 @@
 
 namespace App\Controllers;
 
+use App\BinarySearch\BinarySearch;
+use App\BinarySearch\DataFactory;
 use App\Poryadok\Utils\Str;
 use Pecee\SimpleRouter\SimpleRouter;
 
@@ -85,6 +87,21 @@ class MainController
         $result = Str::isPollyndrom($str);
         SimpleRouter::response()->json([
             $result
+        ]);
+    }
+
+    public function binarySearch() {
+        $dataFactory = (new DataFactory());
+        $dataFactory->setItemsCount(10);
+        $ar = $dataFactory->createArray();
+        $num = -100;
+
+        $result = (new BinarySearch())->searchNumber($ar, $num);
+
+        SimpleRouter::response()->json([
+            'array' => $ar,
+            'num' => $num,
+            'result' => $result
         ]);
     }
 }
