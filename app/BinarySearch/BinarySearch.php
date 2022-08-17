@@ -26,7 +26,7 @@ class BinarySearch
                 $delta = abs($num - $ar[$mid]);
                 if($delta < $minDelta) {
                     $minDelta = $delta;
-                    $result = $ar[$mid];
+                    $result = $mid;
                 }
             }
 
